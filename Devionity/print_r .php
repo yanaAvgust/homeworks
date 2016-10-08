@@ -1,14 +1,22 @@
 <?php
 
+$countries = array(
+    'Canada' => 'Toronto',
+    'Spain' => 'Madrid',
+    'Ukraine' => 'Kiev',
+    'France' => 'Paris',
+    'India' => 'Delhi' );
 
-$arr=[ 'astraliya', 'america' 'europe']
 
-foreach ($countries=$arr)
+echo '<br>';
+
 
 echo '<pre>';
 print_r($countries);
-echo '<pre>';
+echo '</pre>';
+
+
 ?>
 
 
-$
+
