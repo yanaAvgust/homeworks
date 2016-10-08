@@ -1,5 +1,7 @@
 <?php
 
+//  Вывести таблицу умножения
+
 echo '<table border="1" cellpadding="20px" align="center" >';
 for ($i = 1; $i <10; $i ++) {
     echo '<tr align="center">';
