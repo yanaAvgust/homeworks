@@ -12,4 +12,3 @@ foreach($numbers as $number){
 }
 echo $result;
 
-//все равно ответ не верный(((
