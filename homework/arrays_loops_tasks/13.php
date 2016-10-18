@@ -8,7 +8,7 @@ for ($i = 1; $i <10; $i ++) {
     for ($j = 1; $j <10; $j ++) {
         $res = $i * $j;
         if ( $res % 2 == 1)
-        echo "<td style='background-color: white'>$res</td>";
+        echo "<td>$res</td>";
         else
             echo "<td style='background-color: gray'>$res</td>";
     }
