@@ -8,42 +8,27 @@
 
 include "1.html";
 
-//$a = $_POST ['a'];
-//$b = $_POST ['b'];
+function get ($key) {
+    return isset ($_POST[$key]) ? $_POST [$key] : null;
+};
+
+//$a = get ('a');
+//$b = get ('b');
 
 $a = "11111, 3, 11, 'aa', 'ff'";
 $b = "11111, 'ff', 11, 22";
 
-$a = explode(",", $a);
-$b = explode(",", $b);
+function getCommonWords($a, $b) {
 
-$ua = array_merge(array_unique($a));
-$ub = array_merge(array_unique($b));
-$intersect = array_merge(array_intersect($ua, $ub));
+    $a = explode(",", $a);
+    $b = explode(",", $b);
+    $ua = array_merge(array_unique($a));
+    $ub = array_merge(array_unique($b));
 
-
-//function getCommonWords($a, $b) {
-    //$a = explode(",", $a);
-    //$b = explode(",", $b);
-//}
-    //for ($i = 0; $i < count($a); $i++) {
-        //$test=false;
-      //  for ($j = 0; $j < count($b); $j++) {
-        //    if ($a[$i] === $b[$j]) {
-          //      $result[] = $a[$i];
-                //$test=true;
-            //    break;
-              // }
-                //} //if($test==false){
-                // echo "Строка а(".$a[$i].") не совпала\n";
-                //}
-         //   }return $result;
-        //}
-
-
+    return $intersect = array_merge(array_intersect($ua, $ub));
+}
 
 echo '<pre>';
-//print_r (getCommonWords($a, $b));
-print_r ($intersect);
+print_r (getCommonWords($a, $b));
 echo '</pre>';
 

@@ -1,19 +1,11 @@
+
 <?php
 
 function requestIsPost ()
 {
     return (bool) $_POST;
 }
-function formIsValid ()
-{
-    return post('username') != ''
-        && post ('email') != ''
-        && post('message') != '';
-}
-function post ($key)
-{
-    return isset ($_POST[$key])?$_GET[$key]: null;
-}
+
 function redirect ($to) {
     header('Location: '. $to);
     die;
@@ -43,11 +35,6 @@ function save (array $comment){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-
     <title>Contact form</title>
 </head>
 

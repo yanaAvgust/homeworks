@@ -4,16 +4,33 @@
 
 
 
-function classic($num)
+function dd($var, $die = false)
 {
-    for ($x = 2; $x <= sqrt($num); $x++)
-        if (!($num % $x)) return false;
+    echo '<pre>';
+    print_r($var);
+    echo '</pre>';
+
+    if ($die) {
+        die;
+    }
+}
+function isPrime($number)
+{
+    if (!is_numeric($number)) {
+        return false;
+    }
+
+    if ($number == 2) {
+        return true;
+    }
+
+    for ($j = 2; $j < $number; $j++) {
+        $res = $number % $j;
+
+        if ($res == 0) {
+            return false;
+        }
+    }
 
     return true;
-}
-
-if(classic((int)$_GET['num'])) {
-    echo 'prostoe';
-} else {
-    echo 'sostavnoe';
 }
